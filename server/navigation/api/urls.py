@@ -5,10 +5,10 @@ from . import views
 
 
 router = routers.DefaultRouter()
-router.register(r'', views.MytableViewSet)
+router.register(r'', views.MytableViewSet, basename='Mytable')
 
 
 urlpatterns = [
     path('v1/ships/', include(router.urls)),  
-    # path('v1/ships/<int:ID>/', MytableViewSet.as_view({'get': 'list'}), name='my-table'),  
+    # path('v1/ships/<int:ID>/', views.MytableViewSet.as_view({'get': 'list'}), name='Mytable'),
 ]
