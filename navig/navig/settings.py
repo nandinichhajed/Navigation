@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
+import os
 from decouple import config
 from pathlib import Path
 
@@ -86,14 +87,28 @@ WSGI_APPLICATION = 'navig.wsgi.application'
 
 import dj_database_url
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'nrsc',
+#         'USER': 'postgres',
+#         'PASSWORD': 'nandinichhajed',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'nrsc',
-        'USER': 'postgres',
-        'PASSWORD': 'nandinichhajed',
-        'HOST': '127.0.0.1',
+        'USER': 'nandini',
+        'PASSWORD': 'Nandinic08@',
+        'HOST': 'nrsc.postgres.database.azure.com',
         'PORT': '5432',
+        'OPTIONS': {
+            "sslmode": "require"
+        },
     }
 }
 
