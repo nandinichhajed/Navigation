@@ -1,0 +1,1 @@
+web: gunicorn navig.wsgi --log-file -
