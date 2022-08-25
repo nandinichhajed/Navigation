@@ -6,5 +6,5 @@ router = routers.DefaultRouter()
 router.register(r'', views.MytableViewSet)
 
 urlpatterns = [
-    path('v1/ships/', include(router.urls)),
+    path('', include(router.urls)),
 ]
