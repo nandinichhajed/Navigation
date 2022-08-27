@@ -10,7 +10,7 @@ class Mytable(models.Model):
     Ship_ID = models.IntegerField(db_column="ship_id")
     Speed = models.IntegerField(db_column="speed")
     Time = models.TimeField(db_column="time")
-    
+
     class Meta:
         db_table = "mytable"
     
